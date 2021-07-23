@@ -1,0 +1,110 @@
+*{
+  font-family: 'Encode Sans SC', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+}
+.App {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 15px;
+  background: black;
+  min-height: 100vh;
+}
+input,button,select, .todo-box, .todo-button{
+  border-radius: 20px;
+}
+.form-container input {
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 20px;
+}
+.form-container button {
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+.todo-heading-wrapper{
+  display:flex;
+  flex-flow: column wrap;
+  text-align: center;
+
+}
+.todo-heading-wrapper-h2 {
+  font-size: 50px;
+}
+.todos-container {
+  color: black;
+  width: 60%;
+}
+.todo-box-h2 {
+  overflow:hidden;
+  } 
+
+@media only screen and (max-width: 1100px) {
+  .dropdown {
+   margin-top: 15px;
+  }
+  .todo-box-h2 {
+    max-width: 60%;
+    } 
+}
+@media only screen and (max-width: 660px) {
+
+  .todo-heading-wrapper-h2 {
+    font-size: 30px;
+  }
+  .todo-box-h2 {
+    max-width: 50%;
+    } 
+}
+
+@media only screen and (max-width: 540px) {
+  .todo-box-h2 {
+    max-width: 30%;
+    } 
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.dropdown {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+.todo-box {
+  height: 70px;
+  background: white;
+  margin-top: 5px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-button {
+  cursor: pointer;
+  color: white;
+  background: black;
+  padding: 15px 20px;
+  margin-right: 10px;
+}
