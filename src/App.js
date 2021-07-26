@@ -12,7 +12,7 @@ export default function App() {
   const [error, setError] = useState("");
   const [status, setStatus] = useState("");
   const [filteredTodos, setFitleredTodos] = useState([]);
-  const [loading, setLoading]=useState(true)
+
 
   useEffect(() => {
     getLocalStorage();
