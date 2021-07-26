@@ -4,16 +4,18 @@ import Todos from "./Todos";
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+
+
 export default function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
   const [error, setError] = useState("");
   const [status, setStatus] = useState("");
   const [filteredTodos, setFitleredTodos] = useState([]);
+  const [loading, setLoading]=useState(true)
 
   useEffect(() => {
     getLocalStorage();
-  
   }, []);
 
   useEffect(() => {
@@ -63,6 +65,7 @@ export default function App() {
   };
   const dropdownHandler = (e) => {
     setStatus(e.target.value);
+ 
   };
 
   const filterHandler = () => {
@@ -77,26 +80,28 @@ export default function App() {
         setFitleredTodos(todos);
     }
   };
-
   return (
-    <div className="App">
-      <Input
-        input={input}
-        setInput={setInput}
-        todos={todos}
-        setTodos={setTodos}
-        handleSubmit={handleSubmit}
-        dropdownHandler={dropdownHandler}
-      />
 
-      <p>{error}</p>
-      <Todos
-        todos={todos}
-        setTodos={setTodos}
-        deleteTodo={deleteTodo}
-        handleComplete={handleComplete}
-        filteredTodos={filteredTodos}
-      />
-    </div>
-  );
+   <div className="App">
+    <Input
+      input={input}
+      setInput={setInput}
+      todos={todos}
+      setTodos={setTodos}
+      handleSubmit={handleSubmit}
+      dropdownHandler={dropdownHandler}
+      
+    />
+
+    <p>{error}</p>
+    <Todos
+      todos={todos}
+      setTodos={setTodos}
+      deleteTodo={deleteTodo}
+      handleComplete={handleComplete}
+      filteredTodos={filteredTodos}
+    />
+  </div>
+)
+
 }

@@ -35,6 +35,10 @@ input,button,select, .todo-box, .todo-button{
   background: white;
   color: black;
 }
+.todo-button:hover, .add-btn:hover{
+  opacity: 0.8;
+  transition: 0.1s ease-out;
+}
 .todo-heading-wrapper{
   display:flex;
   flex-flow: column wrap;
@@ -84,6 +88,7 @@ input,button,select, .todo-box, .todo-button{
 .dropdown {
   margin-left: 5px;
   padding: 5px;
+  outline: none;
   font-size: 20px;
 }
 .todo-box {
@@ -95,6 +100,7 @@ input,button,select, .todo-box, .todo-button{
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  transition: 0.3s ease-out;
 }
 .complete {
   text-decoration: line-through;
